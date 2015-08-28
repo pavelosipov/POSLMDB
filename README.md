@@ -1,2 +1,2 @@
 # POSLMDB
-CocoaPod for Sysmas's [LMDB](http://symas.com/mdb/)
+CocoaPod for Symas' [LMDB](http://symas.com/mdb/)
