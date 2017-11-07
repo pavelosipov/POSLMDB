@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         =  'POSLMDB'
-    s.version      =  '0.9.16'
+    s.version      =  '0.9.21'
     s.license      =  'MIT'
     s.summary      =  'Cocoapod for LMDB.'
     s.description  =  'Cocoapod for LMDB. LMDB is a fast key-value store developed by Symas.'
