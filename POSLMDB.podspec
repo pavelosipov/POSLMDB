@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         =  'POSLMDB'
-    s.version      =  '0.9.21'
+    s.version      =  '0.9.22'
     s.license      =  'MIT'
     s.summary      =  'Cocoapod for LMDB.'
     s.description  =  'Cocoapod for LMDB. LMDB is a fast key-value store developed by Symas.'
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     s.source = { :git => 'https://github.com/pavelosipov/POSLMDB.git', :submodules => true }
 
     s.subspec 'lmdb' do |lmdb|
-        lmdb.source_files  = %w{ mdb.c lmdb.h midl.h midl.c midl.h }.map { |f| File.join "lmdb-library/libraries/liblmdb", f }
+        lmdb.source_files  = %w{ mdb.c lmdb.h midl.h midl.c }.map { |f| File.join "lmdb-library/libraries/liblmdb", f }
         lmdb.header_dir    = 'lmdb'
         lmdb.requires_arc  = false
         lmdb.xcconfig      = {
