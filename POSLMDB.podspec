@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
     s.subspec 'lmdb' do |lmdb|
         lmdb.source_files  = %w{ mdb.c lmdb.h midl.h midl.c }.map { |f| File.join "lmdb-library/libraries/liblmdb", f }
-        lmdb.header_dir    = 'lmdb'
+        lmdb.module_name   = 'lmdb'
         lmdb.requires_arc  = false
         lmdb.xcconfig      = {
             'GCC_PREPROCESSOR_DEFINITIONS' => 'MDB_USE_POSIX_SEM=1'
