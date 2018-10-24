@@ -11,15 +11,10 @@ Pod::Spec.new do |s|
     s.osx.deployment_target = '10.7'
 
     s.source = { :git => 'https://github.com/pavelosipov/POSLMDB.git', :submodules => true }
-
-    s.subspec 'lmdb' do |lmdb|
-        lmdb.source_files  = %w{ mdb.c lmdb.h midl.h midl.c }.map { |f| File.join "lmdb-library/libraries/liblmdb", f }
-        lmdb.module_name   = 'lmdb'
-        lmdb.requires_arc  = false
-        lmdb.xcconfig      = {
-            'GCC_PREPROCESSOR_DEFINITIONS' => 'MDB_USE_POSIX_SEM=1'
-        }
-    end
-
-    s.requires_arc = false
+    s.source_files  = %w{ mdb.c lmdb.h midl.h midl.c }.map { |f| File.join "lmdb-library/libraries/liblmdb", f }
+    s.module_name   = 'lmdb'
+    s.requires_arc  = false
+    s.xcconfig      = {
+        'GCC_PREPROCESSOR_DEFINITIONS' => 'MDB_USE_POSIX_SEM=1'
+    }
 end
