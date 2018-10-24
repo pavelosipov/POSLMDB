@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
     s.source = { :git => 'https://github.com/pavelosipov/POSLMDB.git', :submodules => true }
     s.source_files  = %w{ mdb.c lmdb.h midl.h midl.c }.map { |f| File.join "lmdb-library/libraries/liblmdb", f }
-    s.module_name   = 'lmdb'
+    s.header_mappings_dir = 'lmdb-library/libraries'
     s.requires_arc  = false
     s.xcconfig      = {
         'GCC_PREPROCESSOR_DEFINITIONS' => 'MDB_USE_POSIX_SEM=1'
